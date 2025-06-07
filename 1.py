@@ -19,18 +19,50 @@ CHROMEDRIVER_PATH = r"C:\Users\Victus\Desktop\New folder (2)\chromedriver-win64\
 
 # List of test URLs (ALL YOUR PROVIDED LINKS)
 test_urls = [
-    "https://fekrbekr.com/onlinetests/archetypemen-test/"
+    # "https://fekrbekr.com/onlinetests/mbti-test/",
+    # "https://fekrbekr.com/onlinetests/mmpi-test/",
+    # "https://fekrbekr.com/onlinetests/cattell-test/",
+    # "https://fekrbekr.com/onlinetests/neo-test/",
+    # "https://fekrbekr.com/onlinetests/neopir-test/",
+    # "https://fekrbekr.com/onlinetests/disc-test/",
+    # "https://fekrbekr.com/onlinetests/archetype-test/", # Testing archetype
+    # "https://fekrbekr.com/onlinetests/archetypemen-test/", # Testing archetypemen
+    # "https://fekrbekr.com/onlinetests/epqadults-test/",
+    # "https://fekrbekr.com/onlinetests/mcmi4-test/",
+    # "https://fekrbekr.com/onlinetests/gwpq-test/",
+    # "https://fekrbekr.com/onlinetests/typeab-test/",
+    # "https://fekrbekr.com/onlinetests/holland-test/",
+    # "https://fekrbekr.com/onlinetests/mii-test/",
+    "https://fekrbekr.com/onlinetests/msq-test/",
+    # "https://fekrbekr.com/onlinetests/eqbaron-test/",
+    # "https://fekrbekr.com/onlinetests/sei-test/",
+    # "https://fekrbekr.com/onlinetests/ocq-test/",
+    # "https://fekrbekr.com/onlinetests/beckdepression-test/",
+    # "https://fekrbekr.com/onlinetests/ghq-test/",
+    # "https://fekrbekr.com/onlinetests/couplesrel-test/",
+    # "https://fekrbekr.com/onlinetests/selfconfidence-test/",
+    # "https://fekrbekr.com/onlinetests/hisa-test/",
+    # "https://fekrbekr.com/onlinetests/ocd-test/",
+    # "https://fekrbekr.com/onlinetests/mbsrq-test/",
+    # "https://fekrbekr.com/onlinetests/rrs-test/",
+    # "https://fekrbekr.com/onlinetests/posthinking-test/",
+    # "https://fekrbekr.com/onlinetests/reldurability-test/",
+    # "https://fekrbekr.com/onlinetests/spousecognition-test/",
+    # "https://fekrbekr.com/onlinetests/foresight-test/",
+    # "https://fekrbekr.com/onlinetests/childintelligence-test/",
+    # "https://fekrbekr.com/onlinetests/hillperfectionism-test/",
+    # "https://fekrbekr.com/onlinetests/becksuicide-test/",
+    # "https://fekrbekr.com/onlinetests/piq-test/",
+    # "https://fekrbekr.com/onlinetests/spin-test/",
+    # "https://fekrbekr.com/onlinetests/scl90r-test/",
+    # "https://fekrbekr.com/onlinetests/yemsq-test/",
+    # "https://fekrbekr.com/onlinetests/bei-test/",
+    # "https://fekrbekr.com/onlinetests/pwbs-test/",
+    # "https://fekrbekr.com/onlinetests/csq-test/"
 ]
 
 # --- Dictionary for test-specific configurations ---
 TEST_CONFIGS = {
-    # value_mapping_strategy:
-    #   'none': Use original value from HTML (default if not specified)
-    #   'order_from_left_0': Map to 0, 1, 2... based on Selenium's left-to-right extraction order
-    #   'order_from_right_0': Map to 0, 1, 2... based on visual right-to-left order (reverse Selenium's extraction)
-    #   'order_from_left_1': Map to 1, 2, 3... based on Selenium's left-to-right extraction order
-    #   'order_from_right_1': Map to 1, 2, 3... based on visual right-to-left order (reverse Selenium's extraction)
-
     "mbti": {
         "option_selector_candidates": ["div.tileradio label", "div.tileradio2 label"],
         "value_attribute": "value",   
@@ -42,7 +74,7 @@ TEST_CONFIGS = {
             "type": "int",
             "field_name": "score"
         },
-        "value_mapping_strategy": "order_from_left_1",
+        "value_mapping_strategy": "order_from_left_1", 
     },
     "mmpi": {
         "option_selector_candidates": ["div.tileradio label", "div.tileradio2 label"],
@@ -50,7 +82,7 @@ TEST_CONFIGS = {
         "value_type": "int", 
         "option_text_selector": "div.box",
         "json_structure": "single_question",
-        "value_mapping_strategy": "order_from_left_0",
+        "value_mapping_strategy": "order_from_left_0", 
     },
     "disc": {
         "option_selector_candidates": ["div#disc-test.tileradio label"],
@@ -59,39 +91,23 @@ TEST_CONFIGS = {
         "option_text_selector": "div.box", 
         "json_structure": "dual_question",
         "actual_options_selector": "div#disc-test.tileradio > div:not([id]):not([class])",
-        "value_mapping_strategy": "order_from_left_1",
+        "value_mapping_strategy": "order_from_left_1", 
     },
     "archetype": {
-        "option_selector_candidates": ["div.tileradio label"],
+        "option_selector_candidates": ["div.tileradio label", "div[class*='radio_button_container'] label", "div.eachques label"], # Improved selectors
         "value_attribute": "value",
         "value_type": "int",
-        "option_text_selector": "div.box",
+        "option_text_selector": "span", # Text is in span for archetypes
         "json_structure": "single_question",
-        "value_mapping_strategy": "none",
+        "value_mapping_strategy": "none", # Use original values
     },
     "archetypemen": {
-        "option_selector_candidates": ["div.tileradio2 label"],
+        "option_selector_candidates": ["div.tileradio2 label", "div[class*='radio_button_container'] label", "div.eachques label"], # Improved selectors
         "value_attribute": "value",
         "value_type": "int",
-        "option_text_selector": "span",
+        "option_text_selector": "span", # Text is in span for archetypemen
         "json_structure": "single_question",
-        "value_mapping_strategy": "none",
-    },
-    "neo": {
-        "option_selector_candidates": ["div.tileradio2 label", "div.tileradio label"],
-        "value_attribute": "value",
-        "value_type": "int",
-        "option_text_selector": "div.box",
-        "json_structure": "single_question",
-        "value_mapping_strategy": "order_from_left_0",  # تغییر به چپ به راست، شروع از 0
-    },
-    "neopir": {
-        "option_selector_candidates": ["div.tileradio2 label", "div.tileradio label"],
-        "value_attribute": "value",
-        "value_type": "int",
-        "option_text_selector": "div.box",
-        "json_structure": "single_question",
-        "value_mapping_strategy": "order_from_left_0",
+        "value_mapping_strategy": "none", 
     },
     "sei": { 
         "option_selector_candidates": ["div.tileradio2 label", "div.tileradio label"],
@@ -99,7 +115,7 @@ TEST_CONFIGS = {
         "value_type": "int",
         "option_text_selector": "div.box",
         "json_structure": "single_question",
-        "value_mapping_strategy": "order_from_left_0",
+        "value_mapping_strategy": "order_from_right_0", 
     },
     "csq": { 
         "option_selector_candidates": ["div.tileradio2 label", "div.tileradio label"],
@@ -107,7 +123,7 @@ TEST_CONFIGS = {
         "value_type": "int",
         "option_text_selector": "div.box",
         "json_structure": "single_question",
-        "value_mapping_strategy": "order_from_left_0",
+        "value_mapping_strategy": "order_from_right_0", 
     },
     "DEFAULT": {
         "option_selector_candidates": ["div.tileradio2 label", "div.tileradio label", "label"],
@@ -115,7 +131,7 @@ TEST_CONFIGS = {
         "value_type": "int",
         "option_text_selector": "div.box",
         "json_structure": "single_question",
-        "value_mapping_strategy": "order_from_left_0",  # تغییر پیش‌فرض به چپ به راست
+        "value_mapping_strategy": "none", 
     }
 }
 
@@ -166,8 +182,7 @@ def extract_questions_and_options_structure(driver, url, test_config):
                 
                 question_text = current_ques_element.find_element(By.CLASS_NAME, "eachquestext").text.strip()
                 
-                # --- Step 1: Collect raw option data ---
-                raw_options_data = [] # List of dicts: {"text": "...", "original_value": "...", "extra_data": {...}}
+                raw_options_data = [] 
                 
                 option_selector_candidates = test_config.get("option_selector_candidates", TEST_CONFIGS["DEFAULT"]["option_selector_candidates"])
                 option_labels, used_selector = find_elements_robustly(current_ques_element, option_selector_candidates)
@@ -186,12 +201,14 @@ def extract_questions_and_options_structure(driver, url, test_config):
                     if len(disc_options_raw_texts) == len(all_disc_radio_inputs_a):
                         for i in range(len(disc_options_raw_texts)):
                             option_value = all_disc_radio_inputs_a[i].get_attribute("value")
-                            raw_options_data.append({"text": disc_options_raw_texts[i], "original_value": option_value})
+                            final_value = i # For DISC, map to 0,1,2,3 from left
+                            raw_options_data.append({"value": final_value, "text": disc_options_raw_texts[i]})
                     else:
                         print(f"هشدار: عدم تطابق در تعداد گزینه‌های DISC برای سوال {ques_num}. استفاده از متن خام به عنوان گزینه.")
                         for i, text in enumerate(disc_options_raw_texts):
-                             raw_options_data.append({"text": text, "original_value": text}) # Fallback to text as value
-                else: # Generic handling for other tests (CSQ, MBTI, SEI, etc.)
+                             raw_options_data.append({"value": i, "text": text}) # Fallback to 0,1,2,3 for text as value
+
+                else: # Generic handling for other tests (CSQ, MBTI, SEI, Archetype, etc.)
                     for label in option_labels:
                         try:
                             input_element = label.find_element(By.CSS_SELECTOR, "input[type='radio']")
@@ -201,23 +218,24 @@ def extract_questions_and_options_structure(driver, url, test_config):
                             option_text_selector = test_config.get("option_text_selector", TEST_CONFIGS["DEFAULT"]["option_text_selector"])
 
                             option_value_raw = input_element.get_attribute(value_attr_name)
-                            option_text = label.find_element(By.CSS_SELECTOR, option_text_selector).text.strip()
+                            option_text_element = label.find_element(By.CSS_SELECTOR, option_text_selector)
+                            option_text = option_text_element.text.strip()
                             
                             current_option_data = {"text": option_text}
 
-                            # Store original_value if it exists
+                            # Set original_value as fallback for 'value' if no mapping strategy
                             if option_value_raw is not None:
                                 try:
                                     if value_type == "int":
-                                        current_option_data["original_value"] = int(option_value_raw)
+                                        current_option_data["value"] = int(option_value_raw)
                                     else:
-                                        current_option_data["original_value"] = option_value_raw
+                                        current_option_data["value"] = option_value_raw
                                 except (ValueError, TypeError):
-                                    current_option_data["original_value"] = None
+                                    current_option_data["value"] = None # Original value invalid
                             else:
-                                current_option_data["original_value"] = None
+                                current_option_data["value"] = None # No original value in HTML
 
-                            # Handle extra data for options (e.g., MBTI's data-score)
+                            # Handle extra data for options
                             extra_data_config = test_config.get("extra_option_data")
                             if extra_data_config:
                                 extra_attr_raw = input_element.get_attribute(extra_data_config["attribute"])
@@ -230,47 +248,39 @@ def extract_questions_and_options_structure(driver, url, test_config):
                                     except (ValueError, TypeError):
                                         current_option_data[extra_data_config["field_name"]] = None
                             
-                            if option_text:
+                            if option_text: 
                                 raw_options_data.append(current_option_data)
                         except NoSuchElementException:
+                            # This can happen if the label doesn't contain expected input/text element. Skip this label.
                             continue 
                         except Exception as ex:
                             print(f"خطا در پردازش label برای سوال {ques_num}: {ex}")
                             continue 
                     
-                # --- Step 2: Apply value mapping strategy ---
+                # --- Step 2: Apply value mapping strategy to raw_options_data ---
                 final_options = []
                 num_options = len(raw_options_data)
                 
                 value_mapping_strategy = test_config.get("value_mapping_strategy", TEST_CONFIGS["DEFAULT"]["value_mapping_strategy"])
 
                 if value_mapping_strategy == "order_from_right_0":
-                    # For values starting from 0 from right
                     for i, opt_data in enumerate(raw_options_data):
                         opt_data["value"] = num_options - 1 - i 
-                    raw_options_data.reverse()
+                    raw_options_data.reverse() 
                 elif value_mapping_strategy == "order_from_left_0":
-                    # Map values from left, starting from 0 (e.g., 0 for first element, 1 for second)
                     for i, opt_data in enumerate(raw_options_data):
                         opt_data["value"] = i 
                 elif value_mapping_strategy == "order_from_right_1":
-                    # Map values from right, starting from 1
                     for i, opt_data in enumerate(raw_options_data):
                         opt_data["value"] = num_options - i 
-                    raw_options_data.reverse()
+                    raw_options_data.reverse() 
                 elif value_mapping_strategy == "order_from_left_1":
-                    # Map values from left, starting from 1 (e.g., 1 for first element, 2 for second)
                     for i, opt_data in enumerate(raw_options_data):
                         opt_data["value"] = i + 1 
-                else: # value_mapping_strategy == "none"
-                    # Use original_value
-                    for opt_data in raw_options_data:
-                        if "original_value" in opt_data and opt_data["original_value"] is not None:
-                            opt_data["value"] = opt_data["original_value"]
-                        else:
-                            opt_data["value"] = None
+                # If strategy is "none", 'value' is already set to original_value in Step 1, so no change needed here.
 
-                final_options = raw_options_data
+                final_options = raw_options_data # The raw_options_data is now processed and becomes final_options
+
 
                 if not final_options:
                     print(f"هشدار: هیچ گزینه‌ای برای سوال {ques_num} در هنگام استخراج ساختار پیدا نشد.")
@@ -377,7 +387,7 @@ def complete_test_and_extract_results(driver, url, total_questions, test_config)
                     else:
                         print(f"هشدار: هیچ ورودی رادیو برای سوال {ques_num}b پیدا نشد. نمی‌توان پاسخ داد.")
 
-                else: # single_question structure (CSQ, MBTI, SEI, etc.)
+                else: # single_question structure (CSQ, MBTI, SEI, Archetype, etc.)
                     radio_inputs = current_ques_element.find_elements(By.CSS_SELECTOR, f"input[type='radio'][name^='ans{ques_num}']")
                     
                     if not radio_inputs:
@@ -518,5 +528,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
