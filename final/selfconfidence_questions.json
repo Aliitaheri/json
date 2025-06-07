@@ -1,0 +1,206 @@
+{
+    "test_name": "selfconfidence",
+    "url": "https://fekrbekr.com/onlinetests/selfconfidence-test/",
+    "questions": [
+        {
+            "question_id": "q1",
+            "question_text": "بیشتر اوقات در خواب و خیال به سر می برم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q2",
+            "question_text": "اغلب آرزو می کنم ای کاش فرد دیگری بودم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q3",
+            "question_text": "صحبت کردن در مقابل دیگران برایم سخت است.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q4",
+            "question_text": "آرزو می کنم که ای کاش جوان تر بودم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q5",
+            "question_text": "چیزهای زیادی در من وجود دارد که اگر می توانستم آنها را تغییر میدادم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q6",
+            "question_text": "همیشه کسی باید به من بگوید چه کار بکنم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q7",
+            "question_text": "انجام هر کار جدیدی وقت زیادی را از من می گیرد.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q8",
+            "question_text": "اغلب از آنچه انجام داده ام، متاسفم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q9",
+            "question_text": "من به راحتی تسلیم می شوم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q10",
+            "question_text": "والدینم انتظارات بیش از حدی از من دارند.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q11",
+            "question_text": "همه چیز در زندگی من گره خورده است.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q12",
+            "question_text": "من به زیبایی دیگران نیستم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q13",
+            "question_text": "دیگران اغلب از من عیب جویی می کنند.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q14",
+            "question_text": "دیگران در من احساس ناخوشایند بی کفایتی را به وجود می آورند.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q15",
+            "question_text": "به آسانی از سرزنش شدن ناراحت می شوم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q16",
+            "question_text": "من فردی شکست خورده هستم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q17",
+            "question_text": "از خود خیلی مطمئن هستم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q18",
+            "question_text": "من دوست داشتنی هستم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q19",
+            "question_text": "دیگران از بودن با من لذت می برند.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q20",
+            "question_text": "هرگز ناخشنود نیستم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q21",
+            "question_text": "تا آنجا که بتوانم کار را به نحو احسن انجام میدهم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q22",
+            "question_text": "من خود را درک می کنم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q23",
+            "question_text": "می توانم تصمیم بگیرم و به آن پایبند باشم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q24",
+            "question_text": "من اصلا کمرو نیستم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        },
+        {
+            "question_id": "q25",
+            "question_text": "همیشه می دانم که به مردم چه بگویم.",
+            "options": [
+                "بله",
+                "خیر"
+            ]
+        }
+    ]
+}
